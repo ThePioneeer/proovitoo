@@ -20,18 +20,24 @@ h3 {
 
 a {
     color: #fff;
-    text-decoration: none;
 }
 
-nav a {
-    padding-right: 10px;
+.navbar {
+    margin-bottom: 0;
 }
 
-.vertical-center {
-    display: flex;
-    align-items: center;
+#user-status {
+    border-radius: 50%;
+    background-color: #ffdb65;
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    padding: 4px;
+    border: 2px solid white;
 }
 
-.profile-image {
-    max-height: 30px;
+#username {
+    padding-top: 17px;
+    padding-bottom: 15px;
+    font-size: 12px;
 }
