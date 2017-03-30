@@ -1,0 +1,35 @@
+/* STYLE.CSS */
+
+header, footer {
+    background-color: #00897B;
+    color: #fff;
+}
+
+header {
+    height: 4em;
+}
+
+h3 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav a {
+    padding-right: 10px;
+}
+
+.vertical-center {
+    min-height: 100%;
+
+    display: flex;
+    align-items: center;
+}
+
+.profile-image {
+    max-height: 30px;
+}
