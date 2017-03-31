@@ -7,6 +7,7 @@
         <link href="css/bootstrap.css" rel="stylesheet">
         <link href="css/font-awesome.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400, 500, 600,700,900" rel="stylesheet">
         <script src="js/script.js" type="text/javascript"></script>
         <script src="js/jquery.js" type="text/javascript"></script>
         <script src="js/bootstrap.js" type="text/javascript"></script>
@@ -17,15 +18,8 @@
                 <nav class="navbar">
                     <div class="container-fluid">
                         <div class="navbar-header">
-                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation" aria-expanded="false">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
                             <span class="navbar-brand">Logo</span>
                         </div>
-                        <div class="collapse navbar-collapse" id="navigation">
                             <div class="nav navbar-nav navbar-right">
                                 <ul class="nav navbar-nav">
                                     <li><a href="#">Müügikohad</a></li>
@@ -40,7 +34,7 @@
                                     </li>
                                     <li id="username">Mihkel</li>
                                     <li class="dropdown">
-                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-ellipsis-v"></i></a>
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-ellipsis-v icon"></i></a>
                                         <ul class="dropdown-menu">
                                             <li><a href="#">Link 1</a></li>
                                             <li><a href="#">Link 2</a></li>
@@ -48,62 +42,218 @@
                                     </li>
                                 </ul>
                             </div>
-                        </div>
                     </div>
                 </nav>
             </header>
 
             <section class="row">
-                <div class="row">
-                    <div class="col-md-6">
-                        6
+                <div class="container-fluid">
+                    <div class="row" id="section-heading">
+                        <div class="col-md-6 col-xs-6">
+                            <span style="font-size: 20px; margin-right: 5px; font-weight: 600;">Tehingud</span>
+                            <span id="tehingud-count">40</span>
+                        </div>
+                        <div class="col-md-6 col-xs-6 text-right">
+                            <button class="no-background-button" type="button"><span class="fa fa-search icon"></span></button>
+                            <button class="no-background-button" type="button"><span class="fa fa-ellipsis-v icon"></span></button>
+                        </div>
                     </div>
-                    <div class="col-md-6">
-                        6
-                    </div>
-                </div>
 
-                <div class="row">
+                    <div class="row">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <ul class="nav nav-tabs" id="location-tab">
+                                        <li class="active"><a data-toggle="tab" href="#tab1">Kohvik 1</a></li>
+                                        <li><a data-toggle="tab" href="#tab2">Kohvik 2</a></li>
+                                        <li><a href="#" id="btnAddLocation"><i class="fa fa-plus"></i></a></li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div id="tab1" class="tab-pane fade in active">
+                                            <ul class="nav nav-tabs" id="tab1-nav">
+                                                <li class="active"><a data-toggle="tab" href="#tab1-era">Erakliendid</a></li>
+                                                <li><a data-toggle="tab" href="#tab1-ette">Ettevõtted</a></li>
+                                            </ul>
+                                            <div class="tab-content">
+                                                <div id="tab1-era" class="tab-pane fade in active">
+                                                    <div class="row">
+                                                        <div class="col-md-5 col-xs-5">
+                                                            <div>
+                                                                <button class=".btn no-background-button transaction-btn" type="button"><span>+ Lisa tehing</span></button>
+                                                                <label>Kuva:</label>
+                                                                <select class="payment-filter">
+                                                                    <option value="koik">Kõik</option>
+                                                                    <option value="sularaha">Sularaha</option>
+                                                                    <option value="pangakaart">Pangakaart</option>
+                                                                    <option value="kinkekaart">Kinkekaart</option>
+                                                                    <option value="mychef">MyChef</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-7 col-xs-7 text-right">
+                                                            <div>
+                                                                <label style="margin-right: 10px;">Filtreeri kuupäeva järgi</label>
+                                                                <span>
+                                                                    <i class="fa fa-calendar calendar-icon"></i>                                                                    
+                                                                    <input type="date" class="alates">
+                                                                </span>
+                                                                <label style="margin-right: 10px; margin-left: 10px;">kuni</label>
+                                                                <span>
+                                                                    <i class="fa fa-calendar calendar-icon"></i>                                                                    
+                                                                    <input type="date" class="kuni">
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="tab1-ette" class="tab-pane fade">
+                                                    <div class="row">
+                                                        <div class="col-md-5 col-xs-5">
+                                                            <div>
+                                                                <button class=".btn no-background-button transaction-btn" type="button"><span>+ Lisa tehing</span></button>
+                                                                <label>Kuva:</label>
+                                                                <select class="payment-filter">
+                                                                    <option value="koik">Kõik</option>
+                                                                    <option value="sularaha">Sularaha</option>
+                                                                    <option value="pangakaart">Pangakaart</option>
+                                                                    <option value="kinkekaart">Kinkekaart</option>
+                                                                    <option value="mychef">MyChef</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-7 col-xs-7 text-right">
+                                                            <div>
+                                                                <label style="margin-right: 10px;">Filtreeri kuupäeva järgi</label>
+                                                                <span>
+                                                                    <i class="fa fa-calendar calendar-icon"></i>                                                                    
+                                                                    <input type="date" class="alates">
+                                                                </span>
+                                                                <label style="margin-right: 10px; margin-left: 10px;">kuni</label>
+                                                                <span>
+                                                                    <i class="fa fa-calendar calendar-icon"></i>                                                                    
+                                                                    <input type="date" class="kuni">
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="tab2" class="tab-pane fade">
+                                            <ul class="nav nav-tabs" id="tab2-nav">
+                                                <li class="active"><a data-toggle="tab" href="#tab2-era">Erakliendid</a></li>
+                                                <li><a data-toggle="tab" href="#tab2-ette">Ettevõtted</a></li>
+                                            </ul>
+                                            <div class="tab-content">
+                                                <div id="tab2-era" class="tab-pane fade in active">
+                                                    <div class="row">
+                                                        <div class="col-md-5 col-xs-5">
+                                                            <div>
+                                                                <button class=".btn no-background-button transaction-btn" type="button"><span>+ Lisa tehing</span></button>
+                                                                <label>Kuva:</label>
+                                                                <select class="payment-filter">
+                                                                    <option value="koik">Kõik</option>
+                                                                    <option value="sularaha">Sularaha</option>
+                                                                    <option value="pangakaart">Pangakaart</option>
+                                                                    <option value="kinkekaart">Kinkekaart</option>
+                                                                    <option value="mychef">MyChef</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-7 col-xs-7 text-right">
+                                                            <div>
+                                                                <label style="margin-right: 10px;">Filtreeri kuupäeva järgi</label>
+                                                                <span>
+                                                                    <i class="fa fa-calendar calendar-icon"></i>                                                                    
+                                                                    <input type="date" class="alates">
+                                                                </span>
+                                                                <label style="margin-right: 10px; margin-left: 10px;">kuni</label>
+                                                                <span>
+                                                                    <i class="fa fa-calendar calendar-icon"></i>                                                                    
+                                                                    <input type="date" class="kuni">
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="tab2-ette" class="tab-pane fade">
+                                                    <div class="row">
+                                                        <div class="col-md-5 col-xs-5">
+                                                            <div>
+                                                                <button class=".btn no-background-button transaction-btn" type="button"><span>+ Lisa tehing</span></button>
+                                                                <label>Kuva:</label>
+                                                                <select class="payment-filter">
+                                                                    <option value="koik">Kõik</option>
+                                                                    <option value="sularaha">Sularaha</option>
+                                                                    <option value="pangakaart">Pangakaart</option>
+                                                                    <option value="kinkekaart">Kinkekaart</option>
+                                                                    <option value="mychef">MyChef</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-7 col-xs-7 text-right">
+                                                            <div>
+                                                                <label style="margin-right: 10px;">Filtreeri kuupäeva järgi</label>
+                                                                <span>
+                                                                    <i class="fa fa-calendar calendar-icon"></i>                                                                    
+                                                                    <input type="date" class="alates">
+                                                                </span>
+                                                                <label style="margin-right: 10px; margin-left: 10px;">kuni</label>
+                                                                <span>
+                                                                    <i class="fa fa-calendar calendar-icon"></i>                                                                    
+                                                                    <input type="date" class="kuni">
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            12
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-2">
+                            2
+                        </div>
+                        <div class="col-md-2">
+                            2
+                        </div>
+                        <div class="col-md-8">
+                        8 
+                        </div>
+                    </div>
+
+                    <section class="row">
+                        Main content
+                    </section>
+
                     <div class="row">
                         <div class="col-md-12">
                             12
                         </div>
                     </div>
                 </div>
-
-                <div class="row">
-                    <div class="col-md-12">
-                        12
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-2">
-                        2
-                    </div>
-                    <div class="col-md-2">
-                        2
-                    </div>
-                    <div class="col-md-8">
-                       8 
-                    </div>
-                </div>
-
-                <section class="row">
-                    Main content
-                </section>
-
-                <div class="row">
-                    <div class="col-md-12">
-                        12
-                    </div>
-                </div>
-
             </section>
 
             <footer class="row">
                 <div class="text-center">
-                    &copy; 2016
+                    &copy; 2016 POS
                 </div>
             </footer>
         </div>    

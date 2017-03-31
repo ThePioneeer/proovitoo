@@ -1,4 +1,7 @@
 /* STYLE.CSS */
+* {
+    font-family: Lato;
+}
 
 header, footer {
     background-color: #00897B;
@@ -7,10 +10,16 @@ header, footer {
 
 header {
     height: 4em;
+    margin-bottom: 1.2em;
 }
 
 footer {
-    height: 3em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+section {
+    color: 	#606060;
 }
 
 h3 {
@@ -22,17 +31,104 @@ a {
     color: #fff;
 }
 
+.alates, .kuni {
+    width: 100px;
+    height: 30px;
+    margin: 0;
+}
+
 .navbar {
     margin-bottom: 0;
 }
 
+.icon {
+    font-size: 1.5em;
+}
+
+.calendar-icon {
+    background-color: #00897B;
+    padding: 8px;
+    margin: 0;
+}
+
+
+.payment-filter {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    outline: none;
+    overflow: hidden;
+}
+
+.no-background-button {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    outline: none;
+    overflow: hidden;
+}
+
+.transaction-btn {
+    background-color: #00897B;
+    color: #fff;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 4px;
+    margin-right: 25px;
+}
+
+.transaction-btn:hover {
+    background-color: #02423b;
+}
+
+#location-tab {
+    border-bottom: none;
+    margin-bottom: 1em;
+}
+
+#location-tab > li > a {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#location-tab > li.active > a {
+    color: #00897B;
+}
+
+.tab-content li.active > a,
+.tab-content li.active > a:hover,
+.tab-content li.active > a:focus {
+    background-color: #00897B;
+    color: #fff;
+}
+
+.nav-tabs {
+    margin-bottom: 1em;
+}
+
+.nav-tabs > li > a {
+    color: #555;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+    border: none;
+}
+
+#section-heading {
+    margin-bottom: 1em;
+}
+
 #user-status {
     border-radius: 50%;
-    background-color: #ffdb65;
+    background-color: lightgreen;
     position: absolute;
     bottom: 12px;
     right: 12px;
-    padding: 4px;
+    padding: 2.5px;
     border: 2px solid white;
 }
 
@@ -40,4 +136,15 @@ a {
     padding-top: 17px;
     padding-bottom: 15px;
     font-size: 12px;
+}
+
+#tehingud-count {
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-bottom: 2px;
+    background-color: #00897B;
+    border-radius: 10px;
+    font-size: 12px;
+    color: white;
+    font-weight: 500;
 }
