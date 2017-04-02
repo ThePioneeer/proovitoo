@@ -27,8 +27,43 @@ h3 {
     margin-top: 10px;
 }
 
+ul > li > a {
+    font-weight: 600;
+}
+
 a {
     color: #fff;
+}
+
+table {
+    width: 100%;
+    font-size: 13px;
+}
+
+tr {
+    border-bottom: 1px solid #ddd;
+}
+
+th, td {
+    padding-bottom: 7px;
+    padding-top: 7px;
+}
+
+input[type="checkbox"]{
+    transform: scale(1.5);
+}
+
+.table {
+    margin-bottom: 2em;
+}
+
+.table-icon {
+    width: 40px;
+}
+
+.kviitung {
+    color: #00897B;
+    text-decoration: underline;
 }
 
 .alates, .kuni {
@@ -43,6 +78,10 @@ a {
 
 .icon {
     font-size: 1.5em;
+}
+
+.toolbar {
+    margin-bottom: 1em;
 }
 
 .calendar-icon {
@@ -81,6 +120,17 @@ a {
 
 .transaction-btn:hover {
     background-color: #02423b;
+}
+
+.amount-per-page {
+    margin-bottom: 1em;
+}
+
+#amount-per-page {
+    margin-left: 10px;
+    width: 50px;
+    height: 30px;
+    text-align: center;
 }
 
 #location-tab {
