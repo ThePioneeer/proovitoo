@@ -31,39 +31,21 @@ ul > li > a {
     font-weight: 600;
 }
 
-a {
+header a {
     color: #fff;
-}
-
-table {
-    width: 100%;
-    font-size: 13px;
 }
 
 tr {
     border-bottom: 1px solid #ddd;
 }
 
-th, td {
-    padding-bottom: 7px;
-    padding-top: 7px;
+.kviitung {
+    color: #00897B;
+    text-decoration: underline;
 }
 
 input[type="checkbox"]{
     transform: scale(1.5);
-}
-
-.table {
-    margin-bottom: 2em;
-}
-
-.table-icon {
-    width: 40px;
-}
-
-.kviitung {
-    color: #00897B;
-    text-decoration: underline;
 }
 
 .alates, .kuni {

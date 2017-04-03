@@ -4,7 +4,42 @@ $(function(){
         var tabID = this.id.slice(0, -7);
         $("."+tabID+"-child").prop("checked", $(this).prop("checked"));
     });
+
+    $("#btnAddLocation").on("click", function(){
+        createTab();
+    });
+
+    $("select").on("change", function(){
+        var tabID = this.id.slice(0, -7);
+        filterResults(tabID);
+    })
+
+    $(".manus").on("click", function(e){
+        e.preventDefault();
+        location.href = "sample.txt"
+    })
 });
+
+function filterResults(id){
+    var filter = $("#"+id+"-select").val().toUpperCase();
+    console.log(filter);
+    var tableEra = document.getElementById(id+"-era-table");
+    var tableEtte = document.getElementById(id+"-ette-table");
+    console.log(tableEra);
+    var tr = tableEra.getElementsByTagName("tr");
+    console.log(tr);
+    for(var i = 0; i < tr.length; i++){
+        var td = tr[i].getElementsByClassName("makseviis")[0];
+        console.log(td);
+        if(td){
+            if(td.innerHtml.toUpperCase().indexOf(filter) > -1){
+                tr[i].style.display = "";
+            }else{
+                tr[i].style.display = "none";
+            }
+        }
+    }
+}
 
 function createTab() {
     var nextTab = $("#location-tab-nav li").length;
@@ -12,7 +47,6 @@ function createTab() {
     //Create navigation link
     $('<li><a href="#tab' + nextTab + '" data-toggle="tab">Kohvik ' + nextTab +'</a></li>').appendTo('#location-tab-nav');    
     $("#last").appendTo("#location-tab-nav");
-    //$('<li><a href="#tab' + nextTab + '" data-toggle="tab">Kohvik ' + nextTab +'</a></li>').insertBefore('#last');
     //set tab active
     showTab();
     //create content for tab

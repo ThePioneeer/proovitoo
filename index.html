@@ -66,7 +66,7 @@
                                     <ul class="nav nav-tabs" id="location-tab-nav">
                                         <li class="active"><a data-toggle="tab" href="#tab1">Kohvik 1</a></li>
                                         <li><a data-toggle="tab" href="#tab2">Kohvik 2</a></li>
-                                        <li id="last"><a href="#" onclick="createTab()" id="btnAddLocation"><i class="fa fa-plus"></i></a></li>
+                                        <li id="last"><a href="#" id="btnAddLocation"><i class="fa fa-plus"></i></a></li>
                                     </ul>                                    
 
                                     <div id="location-tab-content" class="tab-content">
@@ -81,7 +81,7 @@
                                                     <div>
                                                         <button class=".btn no-background-button transaction-btn" type="button"><span>+ Lisa tehing</span></button>
                                                         <label>Kuva:</label>
-                                                        <select class="payment-filter">
+                                                        <select id="tab1-select" class="payment-filter">
                                                             <option value="koik">Kõik</option>
                                                             <option value="sularaha">Sularaha</option>
                                                             <option value="pangakaart">Pangakaart</option>
@@ -108,9 +108,9 @@
 
                                             <div id="tab1-content" class="tab-content">
                                                 <div id="tab1-era" class="tab-pane fade in active">
-                                                    <div class="row table">
+                                                    <div class="row">
                                                         <div class="col-md-12">
-                                                            <table>
+                                                            <table id="tab1-era-table" class="table">
                                                                 <thead>
                                                                     <tr>
                                                                         <th><input type="checkbox" id="tab1-era-parent"></th>
@@ -129,55 +129,55 @@
                                                                         <td><input class="tab1-era-child" type="checkbox"></td>
                                                                         <td>15.08.2016 14:02</td>
                                                                         <td>15.75€</td>
-                                                                        <td>Pangakaart</td>
+                                                                        <td class="makseviis">Pangakaart</td>
                                                                         <td>Makstud</td>
                                                                         <td>Mihkel Puu</td>
                                                                         <td><a class="kviitung" href="#">100002</a></td>
-                                                                        <td class="table-icon"><button class="no-background-button" type="button"><span class="fa fa-paperclip"></button></span></td>
+                                                                        <td class="table-icon"><button class="no-background-button manus" type="button"><span class="fa fa-paperclip"></button></span></td>
                                                                         <td class="table-icon"><button class="no-background-button" type="button"><span class="fa fa-pencil"></button></span></td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td><input class="tab1-era-child" type="checkbox" checked></td>
                                                                         <td>15.08.2016 14:02</td>
                                                                         <td>6.22€</td>
-                                                                        <td>Sularaha</td>
+                                                                        <td class="makseviis">Sularaha</td>
                                                                         <td>Makstud</td>
                                                                         <td>Toivo Muu</td>
                                                                         <td><a class="kviitung" href="#">100003</a></td>
-                                                                        <td class="table-icon"><button class="no-background-button" type="button"><span class="fa fa-paperclip"></button></span></td>
+                                                                        <td class="table-icon"><button class="no-background-button manus" type="button"><span class="fa fa-paperclip"></button></span></td>
                                                                         <td class="table-icon"><button class="no-background-button" type="button"><span class="fa fa-pencil"></button></span></td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td><input class="tab1-era-child" type="checkbox"></td>
                                                                         <td>15.08.2016 14:02</td>
                                                                         <td>3.40€</td>
-                                                                        <td>Kinkekaart</td>
+                                                                        <td class="makseviis">Kinkekaart</td>
                                                                         <td>Makstud</td>
                                                                         <td>Mihkel Puu</td>
                                                                         <td><a class="kviitung" href="#">100005</a></td>
-                                                                        <td class="table-icon"><button class="no-background-button" type="button"><span class="fa fa-paperclip"></button></span></td>
+                                                                        <td class="table-icon"><button class="no-background-button manus" type="button"><span class="fa fa-paperclip"></button></span></td>
                                                                         <td class="table-icon"><button class="no-background-button" type="button"><span class="fa fa-pencil"></button></span></td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td><input class="tab1-era-child" type="checkbox"></td>
                                                                         <td>15.08.2016 14:02</td>
                                                                         <td>5.18€</td>
-                                                                        <td>MyChef</td>
+                                                                        <td class="makseviis">MyChef</td>
                                                                         <td>Makstud</td>
                                                                         <td>Toivo Muu</td>
                                                                         <td><a class="kviitung" href="#">100007</a></td>
-                                                                        <td class="table-icon"><button class="no-background-button" type="button"><span class="fa fa-paperclip"></button></span></td>
+                                                                        <td class="table-icon"><button class="no-background-button manus" type="button"><span class="fa fa-paperclip"></button></span></td>
                                                                         <td class="table-icon"><button class="no-background-button" type="button"><span class="fa fa-pencil"></button></span></td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td><input class="tab1-era-child" type="checkbox"></td>
                                                                         <td>15.08.2016 14:02</td>
                                                                         <td>4.20€</td>
-                                                                        <td>Pangakaart</td>
+                                                                        <td class="makseviis">Pangakaart</td>
                                                                         <td>Makstud</td>
                                                                         <td>Toivo Muu</td>
                                                                         <td><a class="kviitung" href="#">100010</a></td>
-                                                                        <td class="table-icon"><button class="no-background-button" type="button"><span class="fa fa-paperclip"></button></span></td>
+                                                                        <td class="table-icon"><button class="no-background-button manus" type="button"><span class="fa fa-paperclip"></button></span></td>
                                                                         <td class="table-icon"><button class="no-background-button" type="button"><span class="fa fa-pencil"></button></span></td>
                                                                     </tr>
                                                                 </tbody>
@@ -186,15 +186,15 @@
                                                     </div>
                                                 </div>
                                                 <div id="tab1-ette" class="tab-pane fade">
-                                                    <div class="row table">
+                                                    <div class="row">
                                                         <div class="col-md-12">
-                                                            <table>
+                                                            <table id="tab1-ette-table" class="table">
                                                                 <thead>
                                                                     <tr>
                                                                         <th><input type="checkbox" id="tab1-ette-parent"></th>
                                                                         <th>Kuupäev</th>
                                                                         <th>Summa</th>
-                                                                        <th>Makseviis</th>
+                                                                        <th class="makseviis">Makseviis</th>
                                                                         <th>Staatus</th>
                                                                         <th>Teenindaja</th>
                                                                         <th>Kviitungi nr.</th>
@@ -207,55 +207,55 @@
                                                                         <td><input class="tab1-ette-child" type="checkbox"></td>
                                                                         <td>15.08.2016 14:02</td>
                                                                         <td>15.75€</td>
-                                                                        <td>Pangakaart</td>
+                                                                        <td class="makseviis">Pangakaart</td>
                                                                         <td>Makstud</td>
                                                                         <td>Mihkel Puu</td>
                                                                         <td><a class="kviitung" href="#">100002</a></td>
-                                                                        <td class="table-icon"><button class="no-background-button" type="button"><span class="fa fa-paperclip"></button></span></td>
+                                                                        <td class="table-icon"><button class="no-background-button manus" type="button"><span class="fa fa-paperclip"></button></span></td>
                                                                         <td class="table-icon"><button class="no-background-button" type="button"><span class="fa fa-pencil"></button></span></td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td><input class="tab1-ette-child" type="checkbox" checked></td>
                                                                         <td>15.08.2016 14:02</td>
                                                                         <td>6.22€</td>
-                                                                        <td>Sularaha</td>
+                                                                        <td class="makseviis">Sularaha</td>
                                                                         <td>Makstud</td>
                                                                         <td>Toivo Muu</td>
                                                                         <td><a class="kviitung" href="#">100003</a></td>
-                                                                        <td class="table-icon"><button class="no-background-button" type="button"><span class="fa fa-paperclip"></button></span></td>
+                                                                        <td class="table-icon"><button class="no-background-button manus" type="button"><span class="fa fa-paperclip"></button></span></td>
                                                                         <td class="table-icon"><button class="no-background-button" type="button"><span class="fa fa-pencil"></button></span></td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td><input class="tab1-ette-child" type="checkbox"></td>
                                                                         <td>15.08.2016 14:02</td>
                                                                         <td>3.40€</td>
-                                                                        <td>Kinkekaart</td>
+                                                                        <td class="makseviis">Kinkekaart</td>
                                                                         <td>Makstud</td>
                                                                         <td>Mihkel Puu</td>
                                                                         <td><a class="kviitung" href="#">100005</a></td>
-                                                                        <td class="table-icon"><button class="no-background-button" type="button"><span class="fa fa-paperclip"></button></span></td>
+                                                                        <td class="table-icon"><button class="no-background-button manus" type="button"><span class="fa fa-paperclip"></button></span></td>
                                                                         <td class="table-icon"><button class="no-background-button" type="button"><span class="fa fa-pencil"></button></span></td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td><input class="tab1-ette-child" type="checkbox"></td>
                                                                         <td>15.08.2016 14:02</td>
                                                                         <td>5.18€</td>
-                                                                        <td>MyChef</td>
+                                                                        <td class="makseviis">MyChef</td>
                                                                         <td>Makstud</td>
                                                                         <td>Toivo Muu</td>
                                                                         <td><a class="kviitung" href="#">100007</a></td>
-                                                                        <td class="table-icon"><button class="no-background-button" type="button"><span class="fa fa-paperclip"></button></span></td>
+                                                                        <td class="table-icon"><button class="no-background-button manus" type="button"><span class="fa fa-paperclip"></button></span></td>
                                                                         <td class="table-icon"><button class="no-background-button" type="button"><span class="fa fa-pencil"></button></span></td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td><input class="tab1-ette-child" type="checkbox"></td>
                                                                         <td>15.08.2016 14:02</td>
                                                                         <td>4.20€</td>
-                                                                        <td>Pangakaart</td>
+                                                                        <td class="makseviis">Pangakaart</td>
                                                                         <td>Makstud</td>
                                                                         <td>Toivo Muu</td>
                                                                         <td><a class="kviitung" href="#">100010</a></td>
-                                                                        <td class="table-icon"><button class="no-background-button" type="button"><span class="fa fa-paperclip"></button></span></td>
+                                                                        <td class="table-icon"><button class="no-background-button manus" type="button"><span class="fa fa-paperclip"></button></span></td>
                                                                         <td class="table-icon"><button class="no-background-button" type="button"><span class="fa fa-pencil"></button></span></td>
                                                                     </tr>
                                                                 </tbody>
@@ -276,7 +276,7 @@
                                                     <div>
                                                         <button class=".btn no-background-button transaction-btn" type="button"><span>+ Lisa tehing</span></button>
                                                         <label>Kuva:</label>
-                                                        <select class="payment-filter">
+                                                        <select id="tab2-select" class="payment-filter">
                                                             <option value="koik">Kõik</option>
                                                             <option value="sularaha">Sularaha</option>
                                                             <option value="pangakaart">Pangakaart</option>
@@ -303,9 +303,9 @@
 
                                             <div id="tab2-content" class="tab-content">
                                                 <div id="tab2-era" class="tab-pane fade in active">
-                                                    <div class="row table">
+                                                    <div class="row">
                                                         <div class="col-md-12">
-                                                            <table>
+                                                            <table id="tab2-era-table" class="table">
                                                                 <thead>
                                                                     <tr>
                                                                         <th><input type="checkbox" id="tab2-era-parent"></th>
@@ -324,55 +324,55 @@
                                                                         <td><input class="tab2-era-child" type="checkbox"></td>
                                                                         <td>15.08.2016 14:02</td>
                                                                         <td>15.75€</td>
-                                                                        <td>Pangakaart</td>
+                                                                        <td class="makseviis">Pangakaart</td>
                                                                         <td>Makstud</td>
                                                                         <td>Mihkel Puu</td>
                                                                         <td><a class="kviitung" href="#">100002</a></td>
-                                                                        <td class="table-icon"><button class="no-background-button" type="button"><span class="fa fa-paperclip"></button></span></td>
+                                                                        <td class="table-icon"><button class="no-background-button manus" type="button"><span class="fa fa-paperclip"></button></span></td>
                                                                         <td class="table-icon"><button class="no-background-button" type="button"><span class="fa fa-pencil"></button></span></td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td><input class="tab2-era-child" type="checkbox" checked></td>
                                                                         <td>15.08.2016 14:02</td>
                                                                         <td>6.22€</td>
-                                                                        <td>Sularaha</td>
+                                                                        <td class="makseviis">Sularaha</td>
                                                                         <td>Makstud</td>
                                                                         <td>Toivo Muu</td>
                                                                         <td><a class="kviitung" href="#">100003</a></td>
-                                                                        <td class="table-icon"><button class="no-background-button" type="button"><span class="fa fa-paperclip"></button></span></td>
+                                                                        <td class="table-icon"><button class="no-background-button manus" type="button"><span class="fa fa-paperclip"></button></span></td>
                                                                         <td class="table-icon"><button class="no-background-button" type="button"><span class="fa fa-pencil"></button></span></td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td><input class="tab2-era-child" type="checkbox"></td>
                                                                         <td>15.08.2016 14:02</td>
                                                                         <td>3.40€</td>
-                                                                        <td>Kinkekaart</td>
+                                                                        <td class="makseviis">Kinkekaart</td>
                                                                         <td>Makstud</td>
                                                                         <td>Mihkel Puu</td>
                                                                         <td><a class="kviitung" href="#">100005</a></td>
-                                                                        <td class="table-icon"><button class="no-background-button" type="button"><span class="fa fa-paperclip"></button></span></td>
+                                                                        <td class="table-icon"><button class="no-background-button manus" type="button"><span class="fa fa-paperclip"></button></span></td>
                                                                         <td class="table-icon"><button class="no-background-button" type="button"><span class="fa fa-pencil"></button></span></td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td><input class="tab2-era-child" type="checkbox"></td>
                                                                         <td>15.08.2016 14:02</td>
                                                                         <td>5.18€</td>
-                                                                        <td>MyChef</td>
+                                                                        <td class="makseviis">MyChef</td>
                                                                         <td>Makstud</td>
                                                                         <td>Toivo Muu</td>
                                                                         <td><a class="kviitung" href="#">100007</a></td>
-                                                                        <td class="table-icon"><button class="no-background-button" type="button"><span class="fa fa-paperclip"></button></span></td>
+                                                                        <td class="table-icon"><button class="no-background-button manus" type="button"><span class="fa fa-paperclip"></button></span></td>
                                                                         <td class="table-icon"><button class="no-background-button" type="button"><span class="fa fa-pencil"></button></span></td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td><input class="tab2-era-child" type="checkbox"></td>
                                                                         <td>15.08.2016 14:02</td>
                                                                         <td>4.20€</td>
-                                                                        <td>Pangakaart</td>
+                                                                        <td class="makseviis">Pangakaart</td>
                                                                         <td>Makstud</td>
                                                                         <td>Toivo Muu</td>
                                                                         <td><a class="kviitung" href="#">100010</a></td>
-                                                                        <td class="table-icon"><button class="no-background-button" type="button"><span class="fa fa-paperclip"></button></span></td>
+                                                                        <td class="table-icon"><button class="no-background-button manus" type="button"><span class="fa fa-paperclip"></button></span></td>
                                                                         <td class="table-icon"><button class="no-background-button" type="button"><span class="fa fa-pencil"></button></span></td>
                                                                     </tr>
                                                                 </tbody>
@@ -381,9 +381,9 @@
                                                     </div>
                                                 </div>
                                                 <div id="tab2-ette" class="tab-pane fade">
-                                                    <div class="row table">
+                                                    <div class="row">
                                                         <div class="col-md-12">
-                                                            <table>
+                                                            <table id="tab2-ette-table" class="table">
                                                                 <thead>
                                                                     <tr>
                                                                         <th><input type="checkbox" id="tab2-ette-parent"></th>
@@ -402,55 +402,55 @@
                                                                         <td><input class="tab2-ette-child" type="checkbox"></td>
                                                                         <td>15.08.2016 14:02</td>
                                                                         <td>15.75€</td>
-                                                                        <td>Pangakaart</td>
+                                                                        <td class="makseviis">Pangakaart</td>
                                                                         <td>Makstud</td>
                                                                         <td>Mihkel Puu</td>
                                                                         <td><a class="kviitung" href="#">100002</a></td>
-                                                                        <td class="table-icon"><button class="no-background-button" type="button"><span class="fa fa-paperclip"></button></span></td>
+                                                                        <td class="table-icon"><button class="no-background-button manus" type="button"><span class="fa fa-paperclip"></button></span></td>
                                                                         <td class="table-icon"><button class="no-background-button" type="button"><span class="fa fa-pencil"></button></span></td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td><input class="tab2-ette-child" type="checkbox" checked></td>
                                                                         <td>15.08.2016 14:02</td>
                                                                         <td>6.22€</td>
-                                                                        <td>Sularaha</td>
+                                                                        <td class="makseviis">Sularaha</td>
                                                                         <td>Makstud</td>
                                                                         <td>Toivo Muu</td>
                                                                         <td><a class="kviitung" href="#">100003</a></td>
-                                                                        <td class="table-icon"><button class="no-background-button" type="button"><span class="fa fa-paperclip"></button></span></td>
+                                                                        <td class="table-icon"><button class="no-background-button manus" type="button"><span class="fa fa-paperclip"></button></span></td>
                                                                         <td class="table-icon"><button class="no-background-button" type="button"><span class="fa fa-pencil"></button></span></td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td><input class="tab2-ette-child" type="checkbox"></td>
                                                                         <td>15.08.2016 14:02</td>
                                                                         <td>3.40€</td>
-                                                                        <td>Kinkekaart</td>
+                                                                        <td class="makseviis">Kinkekaart</td>
                                                                         <td>Makstud</td>
                                                                         <td>Mihkel Puu</td>
                                                                         <td><a class="kviitung" href="#">100005</a></td>
-                                                                        <td class="table-icon"><button class="no-background-button" type="button"><span class="fa fa-paperclip"></button></span></td>
+                                                                        <td class="table-icon"><button class="no-background-button manus" type="button"><span class="fa fa-paperclip"></button></span></td>
                                                                         <td class="table-icon"><button class="no-background-button" type="button"><span class="fa fa-pencil"></button></span></td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td><input class="tab2-ette-child" type="checkbox"></td>
                                                                         <td>15.08.2016 14:02</td>
                                                                         <td>5.18€</td>
-                                                                        <td>MyChef</td>
+                                                                        <td class="makseviis">MyChef</td>
                                                                         <td>Makstud</td>
                                                                         <td>Toivo Muu</td>
                                                                         <td><a class="kviitung" href="#">100007</a></td>
-                                                                        <td class="table-icon"><button class="no-background-button" type="button"><span class="fa fa-paperclip"></button></span></td>
+                                                                        <td class="table-icon"><button class="no-background-button manus" type="button"><span class="fa fa-paperclip"></button></span></td>
                                                                         <td class="table-icon"><button class="no-background-button" type="button"><span class="fa fa-pencil"></button></span></td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td><input class="tab2-ette-child" type="checkbox"></td>
                                                                         <td>15.08.2016 14:02</td>
                                                                         <td>4.20€</td>
-                                                                        <td>Pangakaart</td>
+                                                                        <td class="makseviis">Pangakaart</td>
                                                                         <td>Makstud</td>
                                                                         <td>Toivo Muu</td>
                                                                         <td><a class="kviitung" href="#">100010</a></td>
-                                                                        <td class="table-icon"><button class="no-background-button" type="button"><span class="fa fa-paperclip"></button></span></td>
+                                                                        <td class="table-icon"><button class="no-background-button manus" type="button"><span class="fa fa-paperclip"></button></span></td>
                                                                         <td class="table-icon"><button class="no-background-button" type="button"><span class="fa fa-pencil"></button></span></td>
                                                                     </tr>
                                                                 </tbody>
