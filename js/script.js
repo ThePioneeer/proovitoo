@@ -57,8 +57,11 @@ function createTabContent(nextTab){
     $('<li><a data-toggle="tab" href="#tab'+nextTab+'-ette">Ettevõtted</a></li>').appendTo('#tab'+nextTab+'-nav');
     //create sub tab content
     $('<div id="tab'+nextTab+'-content" class="tab-content"></div>').appendTo('#tab'+nextTab);
-    $('<div id="tab'+nextTab+'-era" class="tab-pane fade in active">TAB'+nextTab+'-ERA</div>').appendTo('#tab'+nextTab+'-content');
-    $('<div id="tab'+nextTab+'-ette" class="tab-pane fade">TAB'+nextTab+'-ETTE</div>').appendTo('#tab'+nextTab+'-content');
+    $('<div id="tab'+nextTab+'-era" class="tab-pane fade in active"></div>').appendTo('#tab'+nextTab+'-content');
+    $('<div id="tab'+nextTab+'-ette" class="tab-pane fade"></div>').appendTo('#tab'+nextTab+'-content');
+    //create table and table heading
+    $('<div class="row"><div class="col-md-12"><table class="table"><thead><tr><th><input type="checkbox" id="tab'+nextTab+'-era-parent"></th><th>Kuupäev</th></th><th>Summa</th></th><th>Makseviis</th></th><th>Staatus</th></th><th>Teenindaja</th></th><th>Kviitungi nr</th><th></th><th></th></tr></thead><tbody class="tab'+nextTab+'-era-table"></tbody></table></div></div>').appendTo('#tab'+nextTab+'-era');
+    $('<div class="row"><div class="col-md-12"><table class="table"><thead><tr><th><input type="checkbox" id="tab'+nextTab+'-ette-parent"></th><th>Kuupäev</th></th><th>Summa</th></th><th>Makseviis</th></th><th>Staatus</th></th><th>Teenindaja</th></th><th>Kviitungi nr</th><th></th><th></th></tr></thead><tbody class="tab'+nextTab+'-era-table"></tbody></table></div></div>').appendTo('#tab'+nextTab+'-ette');
 }
 
 
