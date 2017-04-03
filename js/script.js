@@ -1,4 +1,10 @@
 //SCRIPT.JS
+$(function(){
+    $("input[type=checkbox]").on("change",function(){
+        var tabID = this.id.slice(0, -7);
+        $("."+tabID+"-child").prop("checked", $(this).prop("checked"));
+    });
+});
 
 function createTab() {
     var nextTab = $("#location-tab-nav li").length;
