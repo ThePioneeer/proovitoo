@@ -73,6 +73,9 @@ input[type="checkbox"]{
     color: white;
 }
 
+.table {
+    margin-bottom: 3em;
+}
 
 .payment-filter {
     background-color: transparent;
@@ -106,7 +109,7 @@ input[type="checkbox"]{
 }
 
 .amount-per-page {
-    margin-bottom: 1em;
+    margin-bottom: 3em;
 }
 
 #amount-per-page {
