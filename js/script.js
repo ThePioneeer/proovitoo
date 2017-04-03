@@ -11,35 +11,30 @@ $(function(){
 
     $("select").on("change", function(){
         var tabID = this.id.slice(0, -7);
-        filterResults(tabID);
-    })
+        var filter = this.value.toUpperCase();
+
+        $("#"+tabID+"-era-table tr").hide();
+        $("#"+tabID+"-ette-table tr").hide();
+        if(filter == "KOIK"){
+            $("#"+tabID+"-era-table tr").show();
+            $("#"+tabID+"-ette-table tr").show();
+        return;
+        }
+        var rex = new RegExp($(this).val(), "i");
+        $("#"+tabID+"-era-table tr").filter(function(){
+            return rex.test($(this).text());
+        }).show();
+
+        $("#"+tabID+"-ette-table tr").filter(function(){
+            return rex.test($(this).text());
+        }).show();
+    });
 
     $(".manus").on("click", function(e){
         e.preventDefault();
         location.href = "sample.txt"
-    })
+    });
 });
-
-function filterResults(id){
-    var filter = $("#"+id+"-select").val().toUpperCase();
-    console.log(filter);
-    var tableEra = document.getElementById(id+"-era-table");
-    var tableEtte = document.getElementById(id+"-ette-table");
-    console.log(tableEra);
-    var tr = tableEra.getElementsByTagName("tr");
-    console.log(tr);
-    for(var i = 0; i < tr.length; i++){
-        var td = tr[i].getElementsByClassName("makseviis")[0];
-        console.log(td);
-        if(td){
-            if(td.innerHtml.toUpperCase().indexOf(filter) > -1){
-                tr[i].style.display = "";
-            }else{
-                tr[i].style.display = "none";
-            }
-        }
-    }
-}
 
 function createTab() {
     var nextTab = $("#location-tab-nav li").length;
