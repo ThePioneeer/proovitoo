@@ -1,5 +1,6 @@
 //SCRIPT.JS
 $(function(){
+
     $("input[type=checkbox]").on("change",function(){
         var tabID = this.id.slice(0, -7);
         $("."+tabID+"-child").prop("checked", $(this).prop("checked"));
@@ -28,13 +29,9 @@ $(function(){
         $("#"+tabID+"-ette-table tr").filter(function(){
             return rex.test($(this).text());
         }).show();
-    });
-
-    $(".manus").on("click", function(e){
-        e.preventDefault();
-        location.href = "sample.txt"
-    });
+    });    
 });
+
 
 function createTab() {
     var nextTab = $("#location-tab-nav li").length;
